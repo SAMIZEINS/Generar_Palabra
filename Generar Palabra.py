@@ -1,17 +1,17 @@
 import random
 
-a = input("Ingrese una palabra en minuscula: ")
-longitud = len(a)
+palabra = input("Ingrese una palabra en minuscula: ")
+longitud = len(palabra)
 contador = 0
 letras = "abcdefghijqlmnñopqrstuvwxyz"
 
 while True:
 
-    b = "".join(random.SystemRandom().choice(letras) for i in range(longitud))
+    generador = "".join(random.SystemRandom().choice(letras) for i in range(longitud))
     contador += 1
-    if b == a:
+    if generador == palabra:
         break
     
 
 print("Intentos: ",contador)
-print("Palabra: ",b)
+print("Palabra: ",generador)
